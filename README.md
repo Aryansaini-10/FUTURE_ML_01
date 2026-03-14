@@ -1,128 +1,183 @@
 # FUTURE_ML_01
-Walmart Weekly Sales Prediction (Machine Learning Project)
-📌 Project Overview
+# 🛒 Walmart Weekly Sales Prediction using Machine Learning
 
-This project analyzes Walmart sales data and builds a machine learning model to predict weekly sales based on economic and environmental factors. The goal is to explore patterns in retail sales and develop predictive models using data science techniques.
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
+![Data Analysis](https://img.shields.io/badge/Data%20Analysis-Pandas-green)
+![Visualization](https://img.shields.io/badge/Visualization-Matplotlib%20%7C%20Seaborn-red)
 
-The project demonstrates a complete machine learning workflow, including data preprocessing, exploratory data analysis (EDA), model training, evaluation, and visualization.
+## 📌 Project Overview
 
-📊 Dataset Information
+Retail companies rely heavily on data to understand customer demand and forecast sales.
+This project focuses on analyzing Walmart sales data and building a **machine learning model to predict weekly sales** using historical data and economic indicators.
 
-The dataset contains historical sales data for Walmart stores along with economic indicators.
+The project demonstrates a **complete data science workflow**, including:
 
-Dataset Features:
+* Data preprocessing
+* Exploratory Data Analysis (EDA)
+* Feature engineering
+* Machine learning model training
+* Model evaluation
+* Data visualization
 
-Feature	Description
-Store	Store ID number
-Date	Week of recorded sales
-Weekly_Sales	Total weekly sales of the store
-Holiday_Flag	Indicates if the week includes a holiday (1 = Holiday, 0 = No Holiday)
-Temperature	Temperature during that week
-Fuel_Price	Fuel price in the region
-CPI	Consumer Price Index
-Unemployment	Unemployment rate
+---
 
-The target variable for prediction is Weekly_Sales.
+## 📊 Dataset Description
 
-⚙️ Technologies Used
+The dataset contains historical Walmart store sales data.
 
-Python
+| Feature      | Description                                           |
+| ------------ | ----------------------------------------------------- |
+| Store        | Store identification number                           |
+| Date         | Week of sales                                         |
+| Weekly_Sales | Total weekly sales revenue                            |
+| Holiday_Flag | Whether the week includes a holiday (1 = Yes, 0 = No) |
+| Temperature  | Temperature of the week                               |
+| Fuel_Price   | Regional fuel price                                   |
+| CPI          | Consumer Price Index                                  |
+| Unemployment | Unemployment rate                                     |
 
-Pandas
+Target Variable:
 
-NumPy
+**Weekly_Sales**
 
-Matplotlib
+---
 
-Seaborn
+## 🧰 Technologies Used
 
-Scikit-learn
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* Google Colab
+* GitHub
 
-Google Colab
+---
 
-🔍 Project Workflow
-1. Data Loading
+## 🔎 Project Workflow
 
-The dataset was imported and inspected using Pandas to understand its structure.
+### 1️⃣ Data Loading
 
-2. Data Preprocessing
+The dataset is imported and inspected using **Pandas** to understand structure and data types.
 
-Converted date column into datetime format
+### 2️⃣ Data Preprocessing
 
-Extracted Year, Month, and Week features
+* Converted date column into datetime format
+* Extracted **year, month, and week features**
+* Checked for missing values
 
-Checked for missing values
+### 3️⃣ Exploratory Data Analysis
 
-3. Exploratory Data Analysis (EDA)
+EDA helps identify patterns and relationships in the data.
 
-Several visualizations were used to explore relationships in the dataset:
+Visualizations included:
 
-Sales distribution
+* Sales distribution
+* Weekly sales trends
+* Holiday vs non-holiday sales comparison
+* Feature correlation heatmap
 
-Holiday vs Non-holiday sales
+### 4️⃣ Machine Learning Models
 
-Correlation heatmap
+Two regression models were implemented:
 
-Weekly sales trend analysis
+* **Linear Regression**
+* **Random Forest Regressor**
 
-4. Model Training
+The dataset was split into **training and testing sets (80/20)**.
 
-Two machine learning models were implemented:
-
-Linear Regression
-
-Random Forest Regressor
-
-The dataset was split into training and testing sets using an 80/20 ratio.
-
-5. Model Evaluation
+### 5️⃣ Model Evaluation
 
 Model performance was evaluated using:
 
-Mean Squared Error (MSE)
+* Mean Squared Error (MSE)
+* R² Score
+* Actual vs Predicted visualization
+* Residual analysis
 
-R² Score
+### 6️⃣ Feature Importance Analysis
 
-Actual vs Predicted Sales visualization
+The Random Forest model was used to identify which variables have the most impact on weekly sales predictions.
 
-Residual analysis
+---
 
-6. Feature Importance
+## 📈 Key Insights
 
-Random Forest was used to determine which variables most influence weekly sales predictions.
+* Holiday weeks generally experience **higher sales activity**.
+* Economic indicators like **CPI and unemployment rate influence purchasing behavior**.
+* Random Forest produced **more accurate predictions** compared to Linear Regression.
 
-📈 Key Insights
+---
 
-Holiday weeks generally show higher sales compared to regular weeks.
+## 📊 Visualizations
 
-Economic indicators such as CPI and unemployment rate influence retail sales.
+The project includes several data visualizations:
 
-Random Forest provided better prediction performance compared to Linear Regression.
+* 📉 Sales Distribution Histogram
+* 🔥 Correlation Heatmap
+* 🎄 Holiday vs Non-Holiday Sales Comparison
+* 📅 Weekly Sales Trend
+* 📍 Actual vs Predicted Sales Plot
+* 📊 Residual Error Plot
+* ⭐ Feature Importance Graph
 
-📊 Visualizations Included
+These visualizations help understand patterns in the data and evaluate model performance.
 
-The project includes several important visualizations:
+---
 
-Sales distribution histogram
+## 📂 Project Structure
 
-Correlation heatmap
+```
+walmart-sales-prediction/
+│
+├── Walmart.csv
+├── Walmart_Sales_Prediction.ipynb
+└── README.md
+```
 
-Holiday vs Non-Holiday sales comparison
+---
 
-Weekly sales trend
+## 🚀 How to Run the Project
 
-Actual vs Predicted sales graph
+1. Clone this repository
 
-Residual plot
+```
+git clone https://github.com/yourusername/walmart-sales-prediction.git
+```
 
-Feature importance chart
+2. Install required libraries
 
-🚀 Conclusion
+```
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
 
-This project demonstrates how machine learning can be applied to predict retail sales using historical and economic data. The analysis highlights how external factors such as economic indicators and seasonal trends influence sales performance.
+3. Open the notebook
 
-Such predictive models can help businesses make data-driven decisions in inventory planning, pricing, and demand forecasting.
-👨‍💻 Author
+```
+Walmart_Sales_Prediction.ipynb
+```
 
-Aryan Saini
-B.Tech CSE Student
+4. Run all cells to reproduce the analysis and model training.
+
+---
+
+## 🎯 Project Outcome
+
+The project successfully demonstrates how machine learning techniques can be applied to **predict retail sales and analyze economic factors affecting business performance**.
+
+This type of analysis can help companies improve:
+
+* demand forecasting
+* inventory management
+* pricing strategies
+
+---
+
+## 👨‍💻 Author
+
+**Aryan Saini**
+B.Tech Computer Science Engineering
+
+Machine Learning | Data Analysis | Python
